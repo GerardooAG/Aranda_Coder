@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+/* Esto es para que cuando clickeemos en peliculas haga un efecto mas suave.. */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.822);
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem;
+    position:static;
+    top: 1rem;
+}
+.logo {
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+    gap: 2rem;
+}
+
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover {
+    color: gray;
+}
+
+header {
+    background-image: url(../img/logos/banner.jpg);
+    background-size:cover;
+    height: 45vh;
+}
+
+header .anuncios{
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+}
+.anuncios span{
+    font-weight: bold;
+}
+.contenedor-productos{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: 
+    "p1 p2 p3 p4"
+    "p5 p6 p7 p8";
+}
+img {
+    height: 16rem;
+    width: 16rem;
+}
+.producto{
+    width: 16rem;
+    background-color: rgba(0, 0, 0, 0.822);
+
+}
+.producto:hover{
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.82);
+-webkit-box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.82);
+-moz-box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.82);
+}
+.texto {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.texto h3{
+    justify-content: center;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.986);
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin-top: 1rem;
+    padding: 5px;
+    font-size: 11px;
+    align-items: center;
+}
+footer ul {
+    display:flex;
+    list-style: none;
+    margin-right: 2rem;
+    gap: 2rem;
+}
+
+table{
+    width: 22rem;
+}
+th, td{
+    height: 3rem;
+}
+
+.logo{
+    width: 4rem;
+    height: 4rem;
+}
+.contenedor-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+.contenedor-productos .producto .p1{
+    grid-area: p1;
+}
+
+.contenedor-productos .producto .p2{
+    grid-area: p2;
+}
+
+.contenedor-productos .producto .p3{
+    grid-area: p3;
+}
+
+.contenedor-productos .producto .p4{
+    grid-area: p4;
+}
+
+.contenedor-productos .producto .p5{
+    grid-area: p5;
+}
+
+.contenedor-productos .producto .p6{
+    grid-area: p6;
+}
+
+.contenedor-productos .producto .p7{
+    grid-area: p7;
+}
+
+.contenedor-productos .producto .p8{
+    grid-area: p8;
+}
+
+@media screen and (max-width:800px){
+    .contenedor-productos{
+        margin: 1rem;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "p1 p2 p3"
+        "p4 p5 p6"
+        "p7 p8 p8";
+    }
+    .producto{
+        width: 14rem;
+        background-color: rgba(0, 0, 0, 0.822);
+    
+    }
+    img{
+        width: 14rem;
+        height: 14rem;
+    }
+    .texto {
+        font-size: 16px;
+    }
+    @media screen and (max-width:500px){
+        .contenedor-productos{
+            margin: 2rem;
+            gap: 2rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(8, auto);
+            grid-template-areas: 
+            "p1"
+            "p2"
+            "p3"
+            "p4"
+            "p5"
+            "p6"
+            "p7"
+            "p8";
+        }
+        .producto{
+            width: 16rem;
+            background-color: rgba(0, 0, 0, 0.822);
+        
+        }
+        img{
+            width: 16rem;
+            height: 16rem;
+        }
+        .texto {
+            font-size: 18px;
+        }
+        footer ul {
+            display:block;
+            gap: 10px;
+        }
+    }
+}
