@@ -11,35 +11,35 @@ html {
 
 
 
-.navbar {
+.navbar_musas {
     background-color: rgba(0, 0, 0, 0.822);
     display: flex;
     width: 100%;
     justify-content: right;
     align-items: center;
     padding: 1rem;
-    position:static;
-    top: 1rem;
+    position:sticky;
+    top: 0;
 }
 .logo {
     color: #fff;
     margin-left: 2rem;
 }
 
-.navbar ul {
+.navbar_musas ul {
     display: flex;
     list-style: none;
     margin-right: 2rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.navbar ul li a{
-    color: #fff;
+.navbar_musas ul li a{
+    color: #fff !important;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-.navbar ul li a:hover {
+.navbar_musas ul li a:hover {
     color: gray;
 }
 
@@ -47,14 +47,19 @@ header {
     background-image: url(../img/logos/banner.jpg);
     background-size:cover;
     height: 45vh;
+    position: static;
+}
+.navbar_musas .boton_musas{
+    background-blend-mode: lighten;
 }
 
-header .anuncios{
+.anuncios{
     background-color: purple;
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
+    height: 20px;
 }
 .anuncios span{
     font-weight: bold;
