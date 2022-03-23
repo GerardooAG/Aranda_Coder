@@ -61,6 +61,23 @@ header {
     font-size: 14px;
     height: 20px;
 }
+.aparecer{
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        }
+    50% {
+        opacity: 1;
+        }
+    100% {
+      opacity: 0;
+        }
+}
+      
 .anuncios span{
     font-weight: bold;
 }

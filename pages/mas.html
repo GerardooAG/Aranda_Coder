@@ -9,13 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logos/musas.jpg" type="image/x-icon">
     <title>Más</title>
 </head>
 <body>
     <div class="anuncios">
-        <p>Envío <span>Gratis</span> comprando más de $599!</p>
+      <p>Envío <span class="aparecer">Gratis</span> comprando más de $599!</p>
     </div><nav class="navbar navbar-expand-md navbar-dark navbar_musas">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +43,19 @@
               </div>
             </div>
         </nav>
-    <header>
+    <header class="animate__animated animate__zoomInDown">
         
     </header>
 
-    <main>
-        <section>
-            <h1>Guía de Tallas</h1>
-            <table border="1" cellpading="10px" cellspacing="5px">
+    <main class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Guía de Tallas</h1>
+        </div>
+      </div>
+      <div class="row">
+          <img src="../img/talla_hombre.jpg" alt="Player Naruto Jutsu it" class="col-xs-12 col-sm-6 col-lg-3">
+          <table cellpading="10px" cellspacing="5px" class="col-xs-12 col-sm-6 col-lg-3"> 
                 <tr>
                     <th>Talla</th>
                     <th>Ancho</th>
@@ -76,8 +82,40 @@
                     <td>78</td>
                 </tr>
             </table>
-            <p>*Las medidas están en cm y puede haber un margen de error.</p>
-        </section>
+            <img src="../img/talla_mujer.jpg" alt="Player Naruto Jutsu it" class="col-xs-12 col-sm-6 col-lg-3">
+            <table cellpading="10px" cellspacing="5px" class="col-xs-12 col-sm-6 col-lg-3"> 
+                <tr>
+                    <th>Talla</th>
+                    <th>Ancho</th>
+                    <th>Largo</th>
+                </tr>
+                <tr>
+                    <td>CH</td>
+                    <td>47</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>51</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>56</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>EG</td>
+                    <td>60</td>
+                    <td>78</td>
+                </tr>
+            </table>            
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>*Las medidas están en cm y puede haber un margen de error.</p>
+        </div>
+      </div>
     </main>
     <footer>
         <ul>
