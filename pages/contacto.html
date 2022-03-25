@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <link rel="shortcut icon" href="../img/logos/musas.jpg" type="image/x-icon">
     <title>Contacto</title>
 </head>
@@ -47,38 +48,29 @@
         
     </header>
 
-    <main>
+    <main class="contacto container ">
         <section>
             <h1>Contactanos</h1>
-            <fieldset>
-                <legend>Tus datos</legend>
-                <form action="">
-                    <div>
-                        <div>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" name="nombre" placeholder="Cosme" required>
-                        </div>
-                        <div>
-                            <label for="apellido">Apellido:</label>
-                            <input type="text" name="apellido" placeholder="Fulanito">
-                        </div>
-                        <div>
-                            <label for="email">Email:</label>
-                            <input type="text" name="email" placeholder="correo@tusitio.com" required>
-                        </div>
-                        <div>
-                            <label for="comentario">Escribe tu comentario</label><br>
-                            <textarea name="comentario" id="" cols="30" rows="10"></textarea>
-                        </div><br>
-                        <div>
-                            <input type="submit" value="ENVIAR">
-                        </div>
-                        <div><br>
-                            <input type="reset" value="BORRAR">
-                        </div>
-                    </div>
-                </form>
-            </fieldset>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+              <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Cosme">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Apellido:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Fulanito">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn mb-3 text-light boton--enviar">Enviar</button>
+              <button type="submit" class="btn mb-3 boton--cancelar">Cancelar</button>
+            </div>
         </section>
     </main>
     <footer>
