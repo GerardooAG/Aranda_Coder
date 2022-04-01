@@ -1,5 +1,10 @@
-$tablet: 800px;
-$celular: 500px;
+$dispositivo:(
+    tablet: 800px,
+    celular: 500px,
+);
+$tablet: map-get($dispositivo, tablet);
+$celular: map-get($dispositivo, celular);
+
 .boton{
     width: 100px!important;
     &--enviar{
@@ -19,6 +24,85 @@ $celular: 500px;
     @media screen and (max-width:$tablet){
         .contacto{
             width: 90%!important;
+        }
+    }
+}
+.contenedor-productos{
+    .producto{
+        @for $i from 1 through 8 {
+            .p#{$i} { 
+                grid-area:p#{$i};
+            }
+        }
+    }
+}
+
+$dispositivo:(
+    tablet: 800px,
+    celular: 500px,
+);
+$tablet: map-get($dispositivo, tablet);
+$celular: map-get($dispositivo, celular);
+.ancho14{
+    width: 14rem;
+}
+.ancho16{
+    width: 16rem;
+}
+@media screen and (max-width:$tablet){
+    .contenedor-productos{
+        margin: 1rem;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "p1 p2 p3"
+        "p4 p5 p6"
+        "p7 p8 p8";
+    }
+    .producto{
+        width: 14rem;
+        background-color: rgba(0, 0, 0, 0.822);
+    
+    }
+    img{
+        width: 14rem;
+        height: 14rem;
+    }
+    .texto {
+        font-size: 16px;
+    }
+    @media screen and (max-width:$celular){
+        .contenedor-productos{
+            margin: 2rem;
+            gap: 2rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(8, auto);
+            grid-template-areas: 
+            "p1"
+            "p2"
+            "p3"
+            "p4"
+            "p5"
+            "p6"
+            "p7"
+            "p8";
+        }
+        .producto{
+            width: 16rem;
+            background-color: rgba(0, 0, 0, 0.822);
+        
+        }
+        img{
+            width: 16rem;
+            height: 16rem;
+        }
+        .texto {
+            font-size: 18px;
+        }
+        footer ul {
+            display:block;
+            gap: 10px;
         }
     }
 }
