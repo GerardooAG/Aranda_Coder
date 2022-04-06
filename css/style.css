@@ -9,17 +9,24 @@ html {
     scroll-behavior: smooth;
 }
 
+.seccion-productos{
+    padding: 1rem;
+}
 
 
 .navbar_musas {
     background-color: rgba(0, 0, 0, 0.822);
     display: flex;
     width: 100%;
-    justify-content: right;
+    justify-content: end!important;
     align-items: center;
     padding: 1rem;
     position:sticky;
     top: 0;
+    z-index: 100;
+}
+.navbar_musas .container-fluid{
+    justify-content: end!important;
 }
 .logo {
     color: #fff;
@@ -46,7 +53,7 @@ html {
 header {
     background-image: url(../img/logos/banner.jpg);
     background-size:cover;
-    height: 45vh;
+    height: 40vh;
     position: static;
 }
 .navbar_musas .boton_musas{
@@ -115,8 +122,15 @@ img {
     font-weight: bold;
     font-size: 18px;
 }
+.texto p{
+    padding-top: 10px;
+}
 .texto h3{
     justify-content: center;
+}
+img .tallas{
+    width: 100%;
+    height: auto;
 }
 footer {
     background-color: rgba(0, 0, 0, 0.986);
@@ -125,7 +139,7 @@ footer {
     color: white;
     margin-top: 1rem;
     padding: 5px;
-    font-size: 11px;
+    font-size: 20px;
     align-items: center;
 }
 footer ul {
@@ -147,10 +161,16 @@ th, td{
     height: 4rem;
 }
 .contenedor-nosotros{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+    margin: 2rem;
+    padding:2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: 
+    "n1 n2";
 }
 .contenedor-productos .producto .p1{
     grid-area: p1;
@@ -184,6 +204,13 @@ th, td{
     grid-area: p8;
 }
 
+.contenedor-nosotros .nosotros .n1{
+    grid-area: n1;
+}
+
+.contenedor-nosotros .nosotros .n2{
+    grid-area: n2;
+}
 @media screen and (max-width:800px){
     .contenedor-productos{
         margin: 1rem;
@@ -194,6 +221,15 @@ th, td{
         "p1 p2 p3"
         "p4 p5 p6"
         "p7 p8 p8";
+    }
+    .contenedor-nosotros{
+        margin: 1rem;
+        gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "n1"
+        "n2";
     }
     .producto{
         width: 14rem;
@@ -240,4 +276,9 @@ th, td{
             gap: 10px;
         }
     }
+}
+
+.centerli{
+    display: flex;
+    justify-content:center;
 }

@@ -49,6 +49,12 @@ $celular: map-get($dispositivo, celular);
 .ancho16{
     width: 16rem;
 }
+.nosotros_imagen img{
+    width: 95%;
+    max-width: 35rem;
+    height: auto;
+    justify-content: center;
+}
 @media screen and (max-width:$tablet){
     .contenedor-productos{
         margin: 1rem;
@@ -67,7 +73,7 @@ $celular: map-get($dispositivo, celular);
     }
     img{
         width: 14rem;
-        height: 14rem;
+        height: auto;
     }
     .texto {
         font-size: 16px;
@@ -89,13 +95,13 @@ $celular: map-get($dispositivo, celular);
             "p8";
         }
         .producto{
-            width: 16rem;
+            width: 100%;
             background-color: rgba(0, 0, 0, 0.822);
         
         }
         img{
-            width: 16rem;
-            height: 16rem;
+            width: 100%;
+            height: auto;
         }
         .texto {
             font-size: 18px;
@@ -103,6 +109,25 @@ $celular: map-get($dispositivo, celular);
         footer ul {
             display:block;
             gap: 10px;
+            align-items: center;
         }
+        header{
+            height: 32vh;
+          }
     }
 }
+
+$facebook: #3872ee;
+$instagram: #ac1542; 
+$twitter: #38e8ee;
+
+@mixin color_contacto($redsocial){
+    color: $redsocial;
+}
+.facebook_contacto{
+    @include color_contacto($facebook)
+}
+.instagram_contacto{
+    @include color_contacto($instagram)
+}
+

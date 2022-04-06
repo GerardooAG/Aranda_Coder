@@ -46,6 +46,12 @@
 .ancho16 {
   width: 16rem; }
 
+.nosotros_imagen img {
+  width: 95%;
+  max-width: 35rem;
+  height: auto;
+  justify-content: center; }
+
 @media screen and (max-width: 800px) {
   .contenedor-productos {
     margin: 1rem;
@@ -58,7 +64,7 @@
     background-color: rgba(0, 0, 0, 0.822); }
   img {
     width: 14rem;
-    height: 14rem; }
+    height: auto; }
   .texto {
     font-size: 16px; } }
 
@@ -70,13 +76,22 @@
     grid-template-rows: repeat(8, auto);
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8"; }
   .producto {
-    width: 16rem;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.822); }
   img {
-    width: 16rem;
-    height: 16rem; }
+    width: 100%;
+    height: auto; }
   .texto {
     font-size: 18px; }
   footer ul {
     display: block;
-    gap: 10px; } }
+    gap: 10px;
+    align-items: center; }
+  header {
+    height: 32vh; } }
+
+.facebook_contacto {
+  color: #3872ee; }
+
+.instagram_contacto {
+  color: #ac1542; }
